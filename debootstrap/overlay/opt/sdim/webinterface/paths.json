@@ -1,0 +1,10 @@
+{
+  "sdim_main_dir": "/opt/sdim",
+  "node_dir": "/opt/sdim/webinterface",
+  "tor_hostname": "/tmp/onion_vhost",
+  "hostname_file": "/etc/hostname",
+  "autoupdate_script": "/opt/sdim/autoupdate.sh",
+  "sdim_setup_script": "/opt/sdim/sdim.sh",
+  "logfile": "/var/log/sdim.log",
+  "settings_file": "/opt/sdim/webinterface/settings.json"
+}

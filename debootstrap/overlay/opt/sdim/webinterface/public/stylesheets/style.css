@@ -1,0 +1,265 @@
+body {
+    font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+    height: 100px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                     supported by Chrome and Opera */
+}
+
+/*
+login
+*/
+.login {
+    margin: 150px auto 0 auto;
+    padding-top: 1.5em;
+    width: 35%;
+    min-width: 300px;
+    max-width: 550px;
+}
+
+.login h3 {
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 0 0 20px 30px;
+}
+
+/*
+settings
+*/
+.settings {
+    padding: 15px;
+}
+
+.settings header h3, h5 {
+    display: inline;
+}
+
+.settings button {
+    width: 100%;
+}
+
+.settings #logout {
+    text-decoration: underline;
+    color: lightgray;
+}
+
+.settings h6 {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 25px;
+    margin-right: 15px;
+    float: left;
+}
+
+/*
+wizard
+*/
+.wizard {
+    display: block;
+    width: 100%;
+    min-width: 50em;
+    max-width: 80em;
+    overflow: hidden;
+    margin: 3em auto 0 auto;
+}
+
+.wizard a {
+    outline: 0;
+}
+
+.wizard ul {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+.wizard ul > li {
+    display: block;
+    padding: 0;
+}
+
+.wizard .headline {
+    float: left;
+}
+
+.wizard .headline h3 {
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.wizard h5 {
+    font-size: 0.875rem;
+    font-weight: 300;
+    float: left;
+    line-height: 25px;
+    margin-right: 15px;
+}
+
+.wizard img {
+    max-height: 95px;
+    float: right;
+}
+
+.wizard #rxt {
+    width: 200px;
+}
+
+.wizard .switch_container {
+    margin: 200px 0 0 40%;
+}
+
+.wizard .abstand-oben {
+    margin-top: 10em;
+}
+
+.wizard .abstand-unten {
+    margin-bottom: 20px !important;
+}
+
+.wizard .abstand-links {
+    margin-left: 15% !important;
+}
+
+.wizard > .steps .current-info {
+    position: absolute;
+    left: -999em;
+}
+
+.wizard > .content > .title {
+    position: absolute;
+    left: -999em;
+}
+
+.wizard > .steps {
+    display: none; /*block to display tabs*/
+    margin: 0 3.5em;
+}
+
+.wizard > .steps .number {
+    display: none;
+}
+
+.wizard > .steps > ul > li {
+    width: 25%;
+}
+
+.wizard > .steps > ul > li,
+.wizard > .actions > ul > li {
+    float: left;
+}
+
+.wizard > .steps a,
+.wizard > .steps a:hover,
+.wizard > .steps a:active {
+    display: block;
+    width: auto;
+    margin: 0 0.5em 0.5em;
+    padding: 1em 1em;
+    text-decoration: none;
+}
+
+.wizard > .steps .disabled a,
+.wizard > .steps .disabled a:hover,
+.wizard > .steps .disabled a:active {
+    background: #eee;
+    color: #aaa;
+    cursor: default;
+}
+
+.wizard > .steps .current a,
+.wizard > .steps .current a:hover,
+.wizard > .steps .current a:active {
+    background: #2184be;
+    color: #fff;
+    cursor: default;
+}
+
+.wizard > .steps .done a,
+.wizard > .steps .done a:hover,
+.wizard > .steps .done a:active {
+    background: #9dc8e2;
+    color: #fff;
+}
+
+.wizard > .steps .error a,
+.wizard > .steps .error a:hover,
+.wizard > .steps .error a:active {
+    background: #ff3111;
+    color: #fff;
+}
+
+.wizard > .content {
+    display: block;
+    margin: 0.5em 4em;
+    min-height: 35em;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+
+.wizard > .content > .body {
+    float: left;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    padding: 2em;
+}
+
+.wizard > .content > .body ul {
+    list-style: disc !important;
+}
+
+.wizard > .content > .body ul > li {
+    display: list-item;
+}
+
+.wizard > .actions {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.wizard > .actions > ul {
+    margin: -4em 4em 0 4em;
+}
+
+.wizard > .actions > ul > li {
+    float: right;
+    width: 10em;
+    text-align: center;
+}
+
+.wizard > .actions > ul > li:first-child {
+    float: left;
+}
+
+.wizard > .actions a,
+.wizard > .actions a:active {
+    display: block;
+    padding: 0.5em 0;
+    text-decoration: none;
+}
+
+.wizard > .actions li:first-child a {
+    border-radius: 0 50px 50px 0;
+}
+
+.wizard > .actions li a {
+    border-radius: 50px 0 0 50px;
+}
+
+.wizard > .actions .disabled a,
+.wizard > .actions .disabled a:hover,
+.wizard > .actions .disabled a:active {
+    display: none;
+}

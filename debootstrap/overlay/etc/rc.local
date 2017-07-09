@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+touch /var/log/sdim.log
+chmod 777 /var/log/sdim.log
+
+#bash /opt/sdim/generateOnionAddress.sh
+echo "####### Starting SDIM #######" >> /var/log/sdim.log
+echo "### $(date) ###" >> /var/log/sdim.log
+bash /opt/sdim/sdim.sh >> /var/log/sdim.log 
+
+exit 0

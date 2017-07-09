@@ -1,0 +1,160 @@
+<link id="theme" rel="stylesheet" href="stylesheets/{{theme}}.css"/>
+<script src="javascripts/jquery.steps.js"></script>
+<script src="javascripts/wizard.js"></script>
+<script src="javascripts/clientscript.js"></script>
+<script>
+    $(function () {
+        sessionStorage.setItem("theme", "{{theme}}");
+    });
+</script>
+
+<div id="wizard" class="noselect">
+    <h2>Name & Password</h2>
+    <section>
+        <div class="headline">
+            <h3>Welcome to your SDIM server!
+                <br>Please choose a hostname and a secure passphrase.</h3>
+        </div>
+        <img class="image" src="images/{{theme}}/rasp.svg">
+        <div class="row abstand-oben">
+            <div class="small-8">
+                <div class="row abstand-unten">
+                    <div class="small-3 columns">
+                        <label for="pi-name" class="right inline">Pi name</label>
+                    </div>
+                    <div class="small-9 columns">
+                        <input type="text" id="pi-name" placeholder="pi name" autofocus>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="new-pp" class="right inline">New passphrase</label>
+                    </div>
+                    <div class="small-9 columns">
+                        <input type="password" id="new-pp" placeholder="new passphrase">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="confirm-pp" class="right inline">Confirm</label>
+                    </div>
+                    <div class="small-9 columns">
+                        <input type="password" id="confirm-pp" placeholder="confirm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <h2>Import Config</h2>
+    <section>
+        <div class="headline">
+            <h3>You might want to import an existing config file.
+                <br>(for now, only the theme will be restored)</h3>
+        </div>
+        <img class="image" src="images/{{theme}}/xmpp.svg">
+        <div class="row abstand-links abstand-oben">
+            <div class="large-8 columns">
+                <label class="inline">Path to config file
+                    <div class="row collapse">
+                        <div class="small-10 columns">
+                            <input id="config_file" type="file">
+                        </div>
+                        <div class="small-2 columns">
+                            <a id="submit_config" class="button postfix">load</a>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </section>
+
+
+    <h2>Onion-Adress</h2>
+    <section>
+        <div class="headline">
+            <h3>This is important.
+                <br>It’s the .onion address of your new SDIM server!
+                <br>Copy it to your clipboard and share it.</h3>
+        </div>
+        <img class="image" src="images/{{theme}}/tor.svg">
+        <div class="row abstand-links abstand-oben">
+            <div class="large-8 columns">
+                <label class="inline">Onion-Address
+                    <div class="row collapse">
+                        <div class="small-10 columns">
+                            <input type="text" id="onion_address" placeholder="loading..." disabled>
+                        </div>
+                        <div class="small-2 columns">
+                            <a id="copy_onion_address" class="button postfix">copy</a>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </section>
+
+
+    <h2>Theme</h2>
+    <section>
+        <div class="headline">
+            <h3>Almost done!
+                <br>If you did not like the design of this wizard -  Try the dark theme. </h3>
+        </div>
+        <img id="rxt" class="image" src="images/{{theme}}/rxt.svg">
+        <div class="switch_container abstand-oben">
+            <h5>Dark theme</h5>
+            <div class="switch">
+                <input id="darkTheme" type="checkbox">
+                <label for="darkTheme"></label>
+            </div>
+        </div>
+    </section>
+
+    <h2>Jabber-ID</h2>
+    <section>
+        <div class="headline">
+            <h3>Create yourself a JID.
+                <br>This will be the Account to use within the Chat-Clients. </h3>
+        </div>
+        <img id="rxt" class="image" src="images/{{theme}}/rxt.svg">
+        <div class="row abstand-oben">
+            <div class="small-8">
+                <div class="row abstand-unten">
+                    <div class="small-3 columns">
+                        <label for="jid_username" class="right inline">JID Username</label>
+                    </div>
+                    <div class="small-9 columns">
+                        <input type="text" id="jid_username" placeholder="jid username" autofocus>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="jid_pp" class="right inline">JID Passphrase</label>
+                    </div>
+                    <div class="small-9 columns">
+                        <input type="password" id="jid_pp" placeholder="jid passphrase">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="jid_confirm" class="right inline">Confirm</label>
+                    </div>
+                    <div class="small-9 columns">
+                        <input type="password" id="jid_confirm" placeholder="confirm">
+                    </div>
+                    <div class="small-9 columns">
+                        <div class="row collapse">
+                            <div class="small-10 columns">
+                                <input type="text" id="jid_preview" placeholder="your jid" disabled>
+                            </div>
+                            <div class="small-2 columns">
+                                <a id="copy_jid" class="button postfix">copy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>

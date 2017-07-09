@@ -1,0 +1,69 @@
+/*
+Foundation 5
+*/
+button, .button {
+    background-color: #2199E8;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #2199E8;
+}
+
+.switch label {
+    background: #DDDDDD; /* nothing overridden */
+}
+
+.switch label:after {
+    background: #F9F9F9;
+}
+
+.switch input:checked + label {
+    background: #2199E8;
+}
+
+/*
+general
+*/
+body {
+    background-color: #2199E8;
+}
+
+h3, h5 {
+    color: #2199E8;
+}
+
+/*
+login
+*/
+.login {
+    background-color: #F9F9F9;
+}
+
+/*
+settings
+*/
+.settings h6 {
+    color: #4d4d4d;
+}
+
+/*
+wizard
+*/
+.wizard .headline {
+    float: left;
+}
+
+.wizard > .content {
+    background: #F9F9F9;
+}
+
+.wizard > .actions a,
+.wizard > .actions a:active {
+    background: #2199E8;
+    color: #fff;
+}
+
+.wizard > .actions a:hover {
+    color: rgba(255, 255, 255, 0.7)
+}

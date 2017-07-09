@@ -1,0 +1,84 @@
+/*
+Foundation 5
+*/
+button, .button {
+    background-color: #FFAE00;
+    color: #606060;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+    color: rgba(96, 96, 96, 0.7);
+    background-color: #FFAE00;
+}
+
+label {
+    color: #FFAE00;
+}
+
+input:not([type]), input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+    background-color: #CCCCCC;
+    border-color: #AAAAAA;
+}
+
+input:not([type]):focus, input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="color"]:focus, textarea:focus {
+    background: #DDDDDD;
+}
+
+input:not([type])[disabled], input:not([type])[readonly], fieldset[disabled] input:not([type]), input[type="text"][disabled], input[type="text"][readonly], fieldset[disabled] input[type="text"], input[type="password"][disabled], input[type="password"][readonly], fieldset[disabled] input[type="password"], input[type="date"][disabled], input[type="date"][readonly], fieldset[disabled] input[type="date"], input[type="datetime"][disabled], input[type="datetime"][readonly], fieldset[disabled] input[type="datetime"], input[type="datetime-local"][disabled], input[type="datetime-local"][readonly], fieldset[disabled] input[type="datetime-local"], input[type="month"][disabled], input[type="month"][readonly], fieldset[disabled] input[type="month"], input[type="week"][disabled], input[type="week"][readonly], fieldset[disabled] input[type="week"], input[type="email"][disabled], input[type="email"][readonly], fieldset[disabled] input[type="email"], input[type="number"][disabled], input[type="number"][readonly], fieldset[disabled] input[type="number"], input[type="search"][disabled], input[type="search"][readonly], fieldset[disabled] input[type="search"], input[type="tel"][disabled], input[type="tel"][readonly], fieldset[disabled] input[type="tel"], input[type="time"][disabled], input[type="time"][readonly], fieldset[disabled] input[type="time"], input[type="url"][disabled], input[type="url"][readonly], fieldset[disabled] input[type="url"], input[type="color"][disabled], input[type="color"][readonly], fieldset[disabled] input[type="color"], textarea[disabled], textarea[readonly], fieldset[disabled] textarea {
+    background-color: #BBBBBB;
+}
+
+.switch label {
+    background: #DDDDDD; /* nothing overridden */
+}
+
+.switch label:after {
+    background: #606060
+}
+
+.switch input:checked + label {
+    background: #FFAE00;
+}
+
+/*
+general
+*/
+body {
+    background-color: #BE8100;
+}
+
+h3, h5, h6 {
+    color: #FFAE00;
+}
+
+/*
+login
+*/
+.login {
+    background-color: #606060;
+}
+
+/*
+settings
+*/
+
+/*
+wizard
+*/
+.wizard .headline {
+    float: left;
+}
+
+.wizard > .content {
+    background: #606060;
+}
+
+.wizard > .actions a,
+.wizard > .actions a:active {
+    background: #FFAE00;
+    color: #606060;
+}
+
+.wizard > .actions a:hover {
+    color: rgba(96, 96, 96, 0.7)
+}

@@ -1,0 +1,123 @@
+<link id="theme" rel="stylesheet" href="stylesheets/{{theme}}.css"/>
+<script src="javascripts/settings.js"></script>
+<script src="javascripts/clientscript.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+
+    $(function () {
+        sessionStorage.setItem("theme", "{{theme}}");
+        if ("{{theme}}" === "dark") {
+            $("body").css("background-color", "#606060");
+            $("#darkTheme").prop("checked", true);
+        }
+        else {
+            $("body").css("background-color", "#F9F9F9");
+        }
+    });
+
+</script>
+
+<div class="settings">
+
+    <header>
+        <div>
+            <h3>SDIM_PI&nbsp;&nbsp;</h3>
+            <h5>JabberID: {{jid}}</h5>
+        </div>
+        <a id="logout" href="/logout">logout</a>
+    </header>
+
+    <div class="noselect">
+        <h5>Settings</h5>
+
+        <div class="row">
+            <div class="small-2 columns">
+                <label for="pi-name" class="right inline">Pi name</label>
+            </div>
+            <div class="small-5 columns">
+                <input type="text" id="pi-name" placeholder="pi name" value="{{hostname}}">
+            </div>
+            <div class="small-2 columns">
+                <a id="update_hostname" class="small button postfix">Update</a>
+            </div>
+            <div class="small-2 columns">
+                <a id="restart_services" class="small button postfix">RestartXMPP</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-2 columns">
+                <label for="onion_address" class="right inline">Onion-Address</label>
+            </div>
+            <div class="small-5 columns">
+                <input type="text" id="onion_address" readonly placeholder="{{onion}}">
+            </div>
+            <div class="small-2 columns">
+                <a id="copy_onion_address" class="small button postfix">Copy</a>
+            </div>
+            <div class="small-2 columns">
+                <a id="reboot_pi" class="small button postfix">RebootPI</a>
+            </div>
+        </div>
+        <br/>
+
+        <div class="row">
+            <div class="small-2 columns">
+                <label for="new_passphrase" class="right inline">New passphrase</label>
+            </div>
+            <div class="small-5 columns">
+                <input type="password" id="new_passphrase" placeholder="new passphrase">
+            </div>
+            <div class="small-2 columns">
+                <a id="update_passphrase" class="small button postfix">Update</a>
+            </div>
+            <div class="small-2 columns">
+                <a id="shutdown_pi" class="small button postfix">ShutDownPI</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-2 columns">
+                <label for="confirm" class="right inline">Confirm</label>
+            </div>
+            <div class="small-5 columns">
+                <input type="password" id="confirm" placeholder="confirm passphrase">
+            </div>
+            <div class="small-2 columns">
+            </div>
+            <div class="small-2 columns">
+                <h6>Dark Theme</h6>
+                <div class="switch">
+                    <input id="darkTheme" type="checkbox">
+                    <label for="darkTheme"></label>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <div class="row">
+            <div class="small-2 columns">
+                <label class="right inline"><!--placeholder--></label>
+            </div>
+            <div class="small-2 columns">
+                <button id="import" type="button" class="small">Import Config</button>
+            </div>
+            <div class="small-2 columns">
+                <button id="export" type="button" class="small">Export Config</button>
+            </div>
+            <div class="small-2 columns">
+                <button id="update" type="button" class="small">Update SDIM</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-2 columns">
+                <label class="right inline">Log</label>
+            </div>
+            <div class="small-10 columns">
+                <textarea id="log" rows="20" placeholder="Log loading..." readonly></textarea>
+            </div>
+        </div>
+    </div>
+</div>
